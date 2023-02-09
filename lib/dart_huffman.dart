@@ -32,9 +32,8 @@ class HuffmanCoding {
       (Node a, Node b) => a.frequency - b.frequency,
     );
 
-    frequencyMap.forEach((String character, int frequency) {
-      priorityQueue.add(Node(frequency, character));
-    });
+    frequencyMap.forEach((String character, int frequency) =>
+        priorityQueue.add(Node(frequency, character)));
 
     while (priorityQueue.length > 1) {
       final Node left = priorityQueue.removeFirst();
